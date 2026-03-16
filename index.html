@@ -1,95 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>A Greater Light Temple of Christ Church</title>
 
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="styles.css">
 
 </head>
 
 <body>
 
-<nav>
+<nav class="navbar">
 
-<div class="logo">
-<button class="menu-toggle">☰</button>
-
-<button class="menu-toggle">☰</button>
-<img src="images/logo.png" alt="Church Logo">
-<button class="menu-toggle">☰</button>
-
-<button class="menu-toggle">☰</button>
-<span>AGL Temple</span>
-<button class="menu-toggle">☰</button>
-
-<button class="menu-toggle">☰</button>
+<div class="nav-left">
+<img src="logo.png" class="nav-logo" alt="Church Logo">
+<span class="nav-title">AGL Temple</span>
 </div>
-<button class="menu-toggle">☰</button>
 
-<ul class="nav-links">
+<button class="nav-toggle" id="navToggle">☰</button>
 
+<ul class="nav-menu" id="navMenu">
 <li><a href="#">Home</a></li>
 <li><a href="#">About</a></li>
 <li><a href="#">Sermons</a></li>
 <li><a href="#">Blog</a></li>
 <li><a href="#">Events</a></li>
 <li><a href="#">Contact</a></li>
-
 </ul>
 
 </nav>
 
 
-<section class="hero">
+<header class="hero">
 
-<img src="images/logo.png" class="hero-logo">
+<img src="logo.png" class="hero-logo">
 
 <h1>A Greater Light Temple of Christ Church</h1>
 
 <p>
 A church dedicated to spreading the gospel of Jesus Christ,
-serving our community, and strengthening faith through
-worship, prayer, and fellowship.
+building strong families, and strengthening the community.
 </p>
 
-<a href="#" class="btn">Join Us This Sunday</a>
+<a href="#" class="btn">Watch Sermons</a>
 
-</section>
+</header>
 
 
 <section>
 
-<h2 class="section-title">Service Times</h2>
+<h2 class="section-title">Our Mission</h2>
 
 <div class="grid">
 
 <div class="card">
-
-<h3>Sunday Worship</h3>
-
-<p>10:00 AM</p>
-
+<h3>Faith</h3>
+<p>
+We are committed to preaching the gospel and helping believers grow in faith.
+</p>
 </div>
 
 <div class="card">
-
-<h3>Bible Study</h3>
-
-<p>Wednesday – 7:00 PM</p>
-
+<h3>Community</h3>
+<p>
+Our church is a place where people can connect, support one another,
+and build strong relationships.
+</p>
 </div>
 
 <div class="card">
-
-<h3>Prayer</h3>
-
-<p>Weekly Community Prayer</p>
-
+<h3>Service</h3>
+<p>
+We serve our community through outreach, prayer, and ministry.
+</p>
 </div>
 
 </div>
@@ -99,25 +85,20 @@ worship, prayer, and fellowship.
 
 <section class="pastor-section">
 
-<h2 class="section-title">Our Pastor</h2>
-
 <div class="pastor">
 
-<img src="images/pastor-rob.jpg" alt="Pastor Rob">
+<img src="pastor-rob.jpg" alt="Pastor Rob">
 
 <div class="pastor-text">
 
 <h3>Pastor Rob</h3>
 
 <p>
-
-Pastor Rob leads A Greater Light Temple of Christ Church with a passion
-for teaching the Word of God and serving the community. His ministry
-focuses on faith, discipleship, and spiritual growth.
-
+Pastor Rob leads our congregation with a deep passion for
+teaching God's word and helping people grow in Christ.
 </p>
 
-<a href="/blog/" class="btn">Read Pastor's Blog</a>
+<a href="#" class="btn">Read More</a>
 
 </div>
 
@@ -128,52 +109,20 @@ focuses on faith, discipleship, and spiritual growth.
 
 <section>
 
-<h2 class="section-title">From The Pastor's Blog</h2>
+<h2 class="section-title">Latest Blog</h2>
 
 <div class="grid">
 
 <div class="blog-card">
-
 <h3>Walking in Faith</h3>
-
-<p>
-
-Encouragement for believers navigating life with faith.
-
-</p>
-
-<a href="#" class="btn">Read</a>
-
+<p>A reflection on trusting God in difficult seasons.</p>
+<a href="#">Read More</a>
 </div>
 
-
 <div class="blog-card">
-
-<h3>Strength in Prayer</h3>
-
-<p>
-
-Understanding the role of prayer in daily life.
-
-</p>
-
-<a href="#" class="btn">Read</a>
-
-</div>
-
-
-<div class="blog-card">
-
-<h3>Serving Our Community</h3>
-
-<p>
-
-How the church can impact lives through service.
-
-</p>
-
-<a href="#" class="btn">Read</a>
-
+<h3>Community Outreach</h3>
+<p>How we serve and uplift our local community.</p>
+<a href="#">Read More</a>
 </div>
 
 </div>
@@ -183,17 +132,25 @@ How the church can impact lives through service.
 
 <footer>
 
-<img src="images/logo.png" alt="Church Logo">
+<img src="logo.png">
 
-<p>© A Greater Light Temple of Christ Church</p>
+<p>
+© A Greater Light Temple of Christ Church
+</p>
 
 </footer>
 
 
 <script>
-const toggle=document.querySelector(".menu-toggle");
-const nav=document.querySelector(".nav-links");
-toggle.addEventListener("click",()=>nav.classList.toggle("show"));
+
+const toggle = document.getElementById("navToggle");
+const menu = document.getElementById("navMenu");
+
+toggle.addEventListener("click", () => {
+menu.classList.toggle("show");
+});
+
 </script>
+
 </body>
 </html>
